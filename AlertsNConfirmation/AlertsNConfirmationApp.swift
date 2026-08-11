@@ -17,9 +17,9 @@ import SwiftUI
 
 @main
 struct AlertsNConfirmationApp: App {
-    var body: some Scene {
-        WindowGroup {
-            StartTab()
-        }
+  var body: some Scene {
+    WindowGroup {
+      StartTab()
     }
+  }
 }

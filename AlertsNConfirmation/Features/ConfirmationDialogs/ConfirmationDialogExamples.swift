@@ -16,34 +16,34 @@
 import SwiftUI
 
 struct ConfirmationDialogExamples: View {
-    @State private var lastAction = "No action selected"
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Button("Item Binding with Message") {
-
-                    }
-                    
-
-                    Button("Choose Project Destination") {
-                        
-                    }
-                } footer: {
-                    Text("Confirmation dialogs gain the same item-binding presentation pattern in iOS 27 and can offer more than the two actions appropriate for an alert.")
-                }
-
-                Section("Last Action") {
-                    Text(lastAction)
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .navigationTitle("Confirmation Dialogs")
+  @State private var lastAction = "No action selected"
+  
+  var body: some View {
+    NavigationStack {
+      List {
+        Section {
+          Button("Item Binding with Message") {
+            
+          }
+          
+          
+          Button("Choose Project Destination") {
+            
+          }
+        } footer: {
+          Text("Confirmation dialogs gain the same item-binding presentation pattern in iOS 27 and can offer more than the two actions appropriate for an alert.")
         }
+        
+        Section("Last Action") {
+          Text(lastAction)
+            .foregroundStyle(.secondary)
+        }
+      }
+      .navigationTitle("Confirmation Dialogs")
     }
+  }
 }
 
 #Preview {
-    ConfirmationDialogExamples()
+  ConfirmationDialogExamples()
 }

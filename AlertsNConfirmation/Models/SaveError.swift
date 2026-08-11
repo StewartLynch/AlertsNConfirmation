@@ -16,33 +16,33 @@
 import Foundation
 
 enum SaveError: LocalizedError {
-    case offline
-    case serverRejected(code: Int)
-
-    var errorDescription: String? {
-        switch self {
-        case .offline:
-            "Unable to Save"
-        case .serverRejected:
-            "Server Rejected the Save"
-        }
+  case offline
+  case serverRejected(code: Int)
+  
+  var errorDescription: String? {
+    switch self {
+    case .offline:
+      "Unable to Save"
+    case .serverRejected:
+      "Server Rejected the Save"
     }
-
-    var recoverySuggestion: String? {
-        switch self {
-        case .offline:
-            "Check your internet connection and try again."
-        case .serverRejected(let code):
-            "The server returned error \(code). Please try again in a moment."
-        }
+  }
+  
+  var recoverySuggestion: String? {
+    switch self {
+    case .offline:
+      "Check your internet connection and try again."
+    case .serverRejected(let code):
+      "The server returned error \(code). Please try again in a moment."
     }
-
-    var code: Int {
-        switch self {
-        case .offline:
-            0
-        case .serverRejected(let code):
-            code
-        }
+  }
+  
+  var code: Int {
+    switch self {
+    case .offline:
+      0
+    case .serverRejected(let code):
+      code
     }
+  }
 }

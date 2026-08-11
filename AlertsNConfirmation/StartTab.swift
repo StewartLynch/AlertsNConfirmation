@@ -16,23 +16,23 @@
 import SwiftUI
 
 struct StartTab: View {
-    var body: some View {
-        TabView {
-            Tab("Alerts", systemImage: "exclamationmark.bubble") {
-                AlertExamples()
-            }
-
-            Tab("Dialogs", systemImage: "questionmark.bubble") {
-                ConfirmationDialogExamples()
-            }
-
-            Tab("Enum Alerts", systemImage: "list.bullet.rectangle") {
-                EnumDrivenAlertExamples()
-            }
-        }
+  var body: some View {
+    TabView {
+      Tab("Alerts", systemImage: "exclamationmark.bubble") {
+        AlertExamples()
+      }
+      
+      Tab("Dialogs", systemImage: "questionmark.bubble") {
+        ConfirmationDialogExamples()
+      }
+      
+      Tab("Enum Alerts", systemImage: "list.bullet.rectangle") {
+        EnumDrivenAlertExamples()
+      }
     }
+  }
 }
 
 #Preview {
-    StartTab()
+  StartTab()
 }

@@ -16,35 +16,35 @@
 import SwiftUI
 
 struct EnumDrivenAlertExamples: View {
-    @State private var lastAction = "No action selected"
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Button("Archive Project") {
-                        
-                    }
-                    Button("Delete Project") {
-                        
-                    }
-                    Button("Save Project") {
-                        
-                    }
-                } footer: {
-                    Text("This mirrors the enum sheet pattern: one optional Identifiable enum models every destination, and its View body supplies the alert actions.")
-                }
-
-                Section("Last Action") {
-                    Text(lastAction)
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .navigationTitle("Enum-Driven Alerts")
+  @State private var lastAction = "No action selected"
+  
+  var body: some View {
+    NavigationStack {
+      List {
+        Section {
+          Button("Archive Project") {
+            
+          }
+          Button("Delete Project") {
+            
+          }
+          Button("Save Project") {
+            
+          }
+        } footer: {
+          Text("This mirrors the enum sheet pattern: one optional Identifiable enum models every destination, and its View body supplies the alert actions.")
         }
+        
+        Section("Last Action") {
+          Text(lastAction)
+            .foregroundStyle(.secondary)
+        }
+      }
+      .navigationTitle("Enum-Driven Alerts")
     }
+  }
 }
 
 #Preview {
-    EnumDrivenAlertExamples()
+  EnumDrivenAlertExamples()
 }

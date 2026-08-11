@@ -14,9 +14,9 @@
 
 
 struct Project {
-    let name: String
-    let fileCount: Int
-
-    static let websiteRedesign = Project(name: "Website Redesign", fileCount: 12)
-    static let launchAssets = Project(name: "Launch Assets", fileCount: 28)
+  let name: String
+  let fileCount: Int
+  
+  static let websiteRedesign = Project(name: "Website Redesign", fileCount: 12)
+  static let launchAssets = Project(name: "Launch Assets", fileCount: 28)
 }
