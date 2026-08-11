@@ -16,38 +16,41 @@
 import SwiftUI
 
 struct AlertExamples: View {
-    @State private var lastAction = "No action selected"
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Button("Item Binding") {
-                       
-                    }
-                    Button("Item Binding with Message") {
-                        
-                    }
-                    Button("Error Binding") {
-                        
-                    }
-                    Button("Error Binding with Message") {
-                        
-                    }
-                } footer: {
-                    Text("Each presentation is driven by one optional value. SwiftUI unwraps it for the alert and resets it to nil on dismissal.")
-                }
-
-                Section("Last Action") {
-                    Text(lastAction)
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .navigationTitle("Alerts")
+  @State private var lastAction = "No action selected"
+  
+  var body: some View {
+    NavigationStack {
+      List {
+        Section {
+          Button("The Old Way") {
+            
+          }
+          Button("Item Binding") {
+            
+          }
+          Button("Item Binding with Message") {
+            
+          }
+          Button("Error Binding") {
+            
+          }
+          Button("Error Binding with Message") {
+            
+          }
+        } footer: {
+          Text("Each presentation is driven by one optional value. SwiftUI unwraps it for the alert and resets it to nil on dismissal.")
         }
+        
+        Section("Last Action") {
+          Text(lastAction)
+            .foregroundStyle(.secondary)
+        }
+      }
+      .navigationTitle("Alerts")
     }
+  }
 }
 
 #Preview {
-    AlertExamples()
+  AlertExamples()
 }
