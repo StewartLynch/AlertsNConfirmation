@@ -17,19 +17,26 @@ import SwiftUI
 
 struct EnumDrivenAlertExamples: View {
   @State private var lastAction = "No action selected"
+  @State private var alertDestination: AlertDestination?
   
   var body: some View {
     NavigationStack {
       List {
         Section {
           Button("Archive Project") {
-            
+            alertDestination = .archive(.websiteRedesign) {
+              lastAction = "Archived Website Redesign from the enum alert"
+            }
           }
           Button("Delete Project") {
-            
+            alertDestination = .delete(.launchAssets) {
+              lastAction = "Deleted launch assets from the enum alert"
+            }
           }
           Button("Save Project") {
-            
+            alertDestination = .saveFailed(.serverRejected(code: 503)) {
+              lastAction = "Retried after enum error 503"
+            }
           }
         } footer: {
           Text("This mirrors the enum sheet pattern: one optional Identifiable enum models every destination, and its View body supplies the alert actions.")
@@ -41,6 +48,12 @@ struct EnumDrivenAlertExamples: View {
         }
       }
       .navigationTitle("Enum-Driven Alerts")
+      .alert("Project Action", item: $alertDestination) {
+        $0
+      } message: {
+        $0.message
+      }
+
     }
   }
 }
