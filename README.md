@@ -1,6 +1,6 @@
 # Alerts and Confirmation Dialogues in iOS 27
 
-![AppIcon128](Images/AppIcon128.png) This is the **starter project** for the video on Alerts and Confirmation Dialogues in iOS 27.
+![AppIcon128](Images/AppIcon128.png) This is the **completed source code** for the video on Alerts and Confirmation Dialogues in iOS 27.
 
 If you want to support my work, you can - </br>
 
